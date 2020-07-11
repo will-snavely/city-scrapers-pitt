@@ -14,6 +14,7 @@ city-scrapers-core = {extras = ["aws"],version = "*"}
 legistar = {git = "https://github.com/opencivicdata/python-legistar-scraper"}
 pypiwin32 = {version = "*",sys_platform = "== 'win32'"}
 atomicwrites = "*"
+esprima = "*"
 
 [dev-packages]
 freezegun = "*"
