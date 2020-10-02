@@ -1,0 +1,829 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//54.210.148.81//NONSGML kigkonsult.se iCalcreator 2.26.9//
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-FROM-URL:https://bethelpark.net
+X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+X-LIC-LOCATION:America/New_York
+BEGIN:STANDARD
+DTSTART:20201101T020000
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+RDATE:20211107T020000
+TZNAME:EST
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:20200308T020000
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+RDATE:20210314T020000
+TZNAME:EDT
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:ai1ec-622@bethelpark.egovhost2.com
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:Department of Community Services\; 4128316800\; commservices@bethel
+ park.net
+DESCRIPTION:
+DTSTART;TZID=America/New_York:20170824T193000
+GEO:+40.332564;-80.031461
+LOCATION:Municipal Building Caucus Room @ 5100 W Library Ave\, Bethel Park\
+ , PA 15102\, USA
+RDATE;TZID=America/New_York:20170112T193000
+RDATE;TZID=America/New_York:20170126T193000
+RDATE;TZID=America/New_York:20170223T193000
+RDATE;TZID=America/New_York:20170309T193000
+RDATE;TZID=America/New_York:20170323T193000
+RDATE;TZID=America/New_York:20170413T193000
+RDATE;TZID=America/New_York:20170427T193000
+RDATE;TZID=America/New_York:20170525T193000
+RDATE;TZID=America/New_York:20170608T193000
+RDATE;TZID=America/New_York:20170622T193000
+RDATE;TZID=America/New_York:20170713T193000
+RDATE;TZID=America/New_York:20170727T193000
+RDATE;TZID=America/New_York:20170824T193000
+RDATE;TZID=America/New_York:20170914T193000
+RDATE;TZID=America/New_York:20170928T193000
+RDATE;TZID=America/New_York:20171012T193000
+RDATE;TZID=America/New_York:20171026T193000
+RDATE;TZID=America/New_York:20171214T193000
+SEQUENCE:0
+SUMMARY:Municipal Authority Meeting
+URL:https://bethelpark.net/event/municipal-authority-meeting/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><div style='clea
+ r:both\;'></div></BODY></HTML>
+X-INSTANT-EVENT:1
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-496@bethelpark.egovhost2.com
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:Bethel Park Administration\; 412 831 6800
+DESCRIPTION:
+DTSTART;TZID=America/New_York:20170905T193000
+LOCATION:Municipal Building @ 5100 W Library Ave Bethel Park PA 15102 USA
+RDATE;TZID=America/New_York:20170103T193000
+RDATE;TZID=America/New_York:20170206T193000
+RDATE;TZID=America/New_York:20170306T193000
+RDATE;TZID=America/New_York:20170403T193000
+RDATE;TZID=America/New_York:20170501T193000
+RDATE;TZID=America/New_York:20170605T193000
+RDATE;TZID=America/New_York:20170710T193000
+RDATE;TZID=America/New_York:20170807T193000
+RDATE;TZID=America/New_York:20170905T193000
+RDATE;TZID=America/New_York:20171002T193000
+RDATE;TZID=America/New_York:20171106T193000
+RDATE;TZID=America/New_York:20171204T193000
+RDATE;TZID=America/New_York:20180102T193000
+RDATE;TZID=America/New_York:20180205T193000
+RDATE;TZID=America/New_York:20180305T193000
+RDATE;TZID=America/New_York:20180402T193000
+RDATE;TZID=America/New_York:20180507T193000
+RDATE;TZID=America/New_York:20180604T193000
+RDATE;TZID=America/New_York:20180702T193000
+RDATE;TZID=America/New_York:20180806T193000
+RDATE;TZID=America/New_York:20180904T193000
+RDATE;TZID=America/New_York:20181001T193000
+RDATE;TZID=America/New_York:20181105T193000
+RDATE;TZID=America/New_York:20181203T193000
+SEQUENCE:0
+SUMMARY:Zoning Hearing Board Meeting
+URL:https://bethelpark.net/event/zoning-hearing-board-meeting/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><div style='clea
+ r:both\;'></div></BODY></HTML>
+X-INSTANT-EVENT:1
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-623@bethelpark.egovhost2.com
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:Department of Community Services\; 4128316800\; commservices@bethel
+ park.net
+DESCRIPTION:
+DTSTART;TZID=America/New_York:20171109T193000
+GEO:+40.287161;-79.990422
+LOCATION:Waste Water Treatment Plant @ 3100 Piney Fork rd\, South Park\, PA
+  15129
+RDATE;TZID=America/New_York:20170810T193000
+RDATE;TZID=America/New_York:20171109T193000
+RDATE;TZID=America/New_York:20180111T193000
+RDATE;TZID=America/New_York:20180125T193000
+RDATE;TZID=America/New_York:20180208T193000
+RDATE;TZID=America/New_York:20180222T193000
+RDATE;TZID=America/New_York:20180308T193000
+RDATE;TZID=America/New_York:20180322T193000
+RDATE;TZID=America/New_York:20180412T193000
+RDATE;TZID=America/New_York:20180426T193000
+RDATE;TZID=America/New_York:20180510T193000
+RDATE;TZID=America/New_York:20180524T193000
+RDATE;TZID=America/New_York:20180614T193000
+RDATE;TZID=America/New_York:20180628T193000
+RDATE;TZID=America/New_York:20180712T193000
+RDATE;TZID=America/New_York:20180726T193000
+RDATE;TZID=America/New_York:20180809T193000
+RDATE;TZID=America/New_York:20180823T193000
+RDATE;TZID=America/New_York:20180913T193000
+RDATE;TZID=America/New_York:20180927T193000
+RDATE;TZID=America/New_York:20181011T193000
+RDATE;TZID=America/New_York:20181025T193000
+RDATE;TZID=America/New_York:20181108T193000
+RDATE;TZID=America/New_York:20181213T193000
+SEQUENCE:0
+SUMMARY:Municipal Authority Meeting
+URL:https://bethelpark.net/event/municipal-authority-meeting-2/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><div style='clea
+ r:both\;'></div></BODY></HTML>
+X-INSTANT-EVENT:1
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-491@bethelpark.egovhost2.com
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:
+DESCRIPTION:
+DTSTART;TZID=America/New_York:20180103T190000
+LOCATION:Municipal Building  - Caucus Room @ 5100 West LIbrary Avenue\, Bet
+ hel Park 15102
+RDATE;TZID=America/New_York:20180103T190000
+RDATE;TZID=America/New_York:20180131T190000
+RDATE;TZID=America/New_York:20180228T190000
+RDATE;TZID=America/New_York:20180328T190000
+RDATE;TZID=America/New_York:20180425T190000
+RDATE;TZID=America/New_York:20180530T190000
+RDATE;TZID=America/New_York:20180627T190000
+RDATE;TZID=America/New_York:20180725T190000
+RDATE;TZID=America/New_York:20180829T190000
+RDATE;TZID=America/New_York:20180926T190000
+RDATE;TZID=America/New_York:20181031T190000
+RDATE;TZID=America/New_York:20181128T190000
+SEQUENCE:0
+SUMMARY:Planning & Zoning Commission Workshop Meeting
+URL:https://bethelpark.net/event/planning-zoning-commission-workshop-meetin
+ g/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><div style='clea
+ r:both\;'></div></BODY></HTML>
+X-INSTANT-EVENT:1
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-10295@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates\,Community Events\
+ ,Special Event
+CONTACT:Dr. Tim Campbell\; tristanflight@yahoo.com\; https://bethelpark.net
+ /government/councilmayor/
+DESCRIPTION:
+DTSTART;TZID=America/New_York:20190206T190000
+DTEND;TZID=America/New_York:20190206T203000
+LOCATION:5100 West Library Avenue\, Bethel Park\, PA 15102
+SEQUENCE:0
+SUMMARY:Town Hall Meeting – Ward 2 – Dr. Campbell
+URL:https://bethelpark.net/event/town-hall-meeting-ward-2-dr-campbell/
+X-COST-TYPE:free
+X-WP-IMAGES-URL:thumbnail\;http://bethelpark.net/wp-content/uploads/sites/4
+ 0/2019/01/ward2meeting.jpg\;732\;950\,medium\;http://bethelpark.net/wp-con
+ tent/uploads/sites/40/2019/01/ward2meeting.jpg\;732\;950\,large\;http://be
+ thelpark.net/wp-content/uploads/sites/40/2019/01/ward2meeting.jpg\;732\;95
+ 0\,full\;http://bethelpark.net/wp-content/uploads/sites/40/2019/01/ward2me
+ eting.jpg\;732\;950
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><p><img class='a
+ ligncenter wp-image-10296 size-full' src='http://bethelpark.net/wp-content
+ /uploads/sites/40/2019/01/ward2meeting.jpg' alt='' width='732' height='950
+ ' srcset='https://bethelpark.net/wp-content/uploads/sites/40/2019/01/ward2
+ meeting-231x300.jpg 231w\, https://bethelpark.net/wp-content/uploads/sites
+ /40/2019/01/ward2meeting.jpg 732w' sizes='(max-width: 732px) 100vw\, 732px
+ ' /></p>\n<div style='clear:both\;'></div></BODY></HTML>
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-11877@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:
+DESCRIPTION:
+DTSTART;TZID=America/New_York:20190612T190000
+LOCATION:BetheL Park Community Center @ 5151 Park Avenue Bethel Park\, PA 1
+ 5102
+SEQUENCE:0
+SUMMARY:Recreation Board Meeting
+URL:https://bethelpark.net/event/recreation-board-meeting/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><div style='clea
+ r:both\;'></div></BODY></HTML>
+X-INSTANT-EVENT:1
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-12691@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates\,Council
+CONTACT:
+DESCRIPTION:revised agenda 11-12-19
+DTSTART;TZID=America/New_York:20191112T193000
+DTEND;TZID=America/New_York:20191112T203000
+SEQUENCE:0
+SUMMARY:Council Regular Meeting
+URL:https://bethelpark.net/event/council-regular-meeting/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><p><a href='http
+ ://bethelpark.net/wp-content/uploads/sites/40/2019/11/revised-agenda-11-12
+ -19.pdf'>revised agenda 11-12-19</a></p>\n<div style='clear:both\;'></div>
+ </BODY></HTML>
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-13428@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:
+DESCRIPTION:
+DTSTART;TZID=America/New_York:20200102T190000
+LOCATION:Municipal Building Council Chambers @ 5100 West Library Ave Bethel
+  Park\, PA 15102
+SEQUENCE:0
+SUMMARY:Planning & Zoning Commission Workshop Meeting
+URL:https://bethelpark.net/event/planning-zoning-commission-workshop-meetin
+ g-2/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><div style='clea
+ r:both\;'></div></BODY></HTML>
+X-INSTANT-EVENT:1
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-13388@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:
+DESCRIPTION:
+DTSTART;TZID=America/New_York:20200108T190000
+LOCATION:Community Center @ 5151 Park Avenue\, Bethel Park
+RRULE:FREQ=MONTHLY;BYDAY=1WE
+SEQUENCE:0
+SUMMARY:Parks & Recreation Board Meetings
+URL:https://bethelpark.net/event/parks-recreation-board-meetings/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><div style='clea
+ r:both\;'></div></BODY></HTML>
+X-INSTANT-EVENT:1
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-13454@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:
+DESCRIPTION:
+DTSTART;TZID=America/New_York:20200115T183000
+LOCATION:Municipal Building Council Chambers @ 5100 West Library Road\, Bet
+ hel Park\, PA 15102
+SEQUENCE:0
+SUMMARY:Shade Tree Commission Meeting
+URL:https://bethelpark.net/event/shade-tree-commission-meeting/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><div style='clea
+ r:both\;'></div></BODY></HTML>
+X-INSTANT-EVENT:1
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-13429@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:
+DESCRIPTION:
+DTSTART;TZID=America/New_York:20200129T190000
+EXDATE;TZID=America/New_York:20200527T190000
+EXDATE;TZID=America/New_York:20200624T190000
+EXDATE;TZID=America/New_York:20200729T190000
+LOCATION:5100 West Library Ave. Bethel Park\, PA 15102 @ Council Chambers
+RRULE:FREQ=MONTHLY;BYDAY=-1WE
+SEQUENCE:0
+SUMMARY:Planning & Zoning Commission Workshop Meeting
+URL:https://bethelpark.net/event/planning-zoning-commission-workshop-meetin
+ g-3/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><div style='clea
+ r:both\;'></div></BODY></HTML>
+X-INSTANT-EVENT:1
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-13455@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:
+DESCRIPTION:
+DTSTART;TZID=America/New_York:20200415T183000
+LOCATION:Municipal Building Council Chambers @ 5100 West Library Avenue\, B
+ ethel Park\, PA 15102
+SEQUENCE:0
+SUMMARY:Shade Tree Commission Meeting
+URL:https://bethelpark.net/event/shade-tree-commission-meeting-2/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><div style='clea
+ r:both\;'></div></BODY></HTML>
+X-INSTANT-EVENT:1
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-15564@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:Municipality of Bethel Park\; 412.831.6800
+DESCRIPTION:The Planning Commission will hold their regular Workshop meetin
+ g at 7:00 on April 29th\, 2020\, using the Zoom webconferencing platform. 
+ If you are interested in participating\, please call the office at 412.831
+ .6800 to request the meeting details. Comments may be emailed ahead of tim
+ e to Stacey Graf\, Director of Engineering\, at sgraf@bethelpark.net.
+DTSTART;TZID=America/New_York:20200429T190000
+DTEND;TZID=America/New_York:20200429T200000
+LOCATION:Zoom Meeting Platform
+SEQUENCE:0
+SUMMARY:Planning Commission Meeting
+URL:https://bethelpark.net/event/planning-commission-meeting/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><p><span style='
+ font-family: verdana\, geneva\, sans-serif'>The Planning Commission will h
+ old their regular Workshop meeting at 7:00 on April 29<sup>th</sup>\, 2020
+ \, using the Zoom webconferencing platform. If you are interested in parti
+ cipating\, please call the office at 412.831.6800 to request the meeting d
+ etails. Comments may be emailed ahead of time to Stacey Graf\, Director of
+  Engineering\, at <a href='mailto:sgraf@bethelpark.net'>sgraf@bethelpark.n
+ et</a>.</span></p>\n<div style='clear:both\;'></div></BODY></HTML>
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-15721@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:Stacey Graf or Scott Dunn\; 412 831 6800
+DESCRIPTION:If you have questions about participating in this event\, you c
+ an reach out to sgraf@bethelpark.net or sdunn@bethelpark.net
+DTSTART;TZID=America/New_York:20200514T190000
+DTEND;TZID=America/New_York:20200514T210000
+LOCATION:Zoom Video and Teleconferencing Platform
+RRULE:FREQ=MONTHLY;BYDAY=2TH
+SEQUENCE:0
+SUMMARY:Bethel Park Municipal Authority Meeting
+URL:https://bethelpark.net/event/bethel-park-municipal-authority-meeting/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><p><span style='
+ font-family: verdana\, geneva\, sans-serif'>If you have questions about pa
+ rticipating in this event\, you can reach out to <a href='mailto:sgraf@bet
+ helpark.ne'>sgraf@bethelpark.ne</a>t or <a href='mailto:sdunn@bethelpark.n
+ et'>sdunn@bethelpark.net</a></span></p>\n<div style='clear:both\;'></div><
+ /BODY></HTML>
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-15722@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:Stacey Graf or Scott Dunn\; 412 831 6800\; sgraf@bethelpark.net
+DESCRIPTION:If you have questions about participating in this event\, you c
+ an reach out to sgraf@bethelpark.net or sdunn@bethelpark.net
+DTSTART;TZID=America/New_York:20200528T190000
+DTEND;TZID=America/New_York:20200528T210000
+LOCATION:Zoom Video and Teleconferencing Platform
+RRULE:FREQ=MONTHLY;BYDAY=4TH
+SEQUENCE:0
+SUMMARY:Bethel Park Municipal Authority Meeting
+URL:https://bethelpark.net/event/bethel-park-municipal-authority-meeting-2/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><p><span style='
+ font-family: verdana\, geneva\, sans-serif'>If you have questions about pa
+ rticipating in this event\, you can reach out to <a href='mailto:sgraf@bet
+ helpark.ne'>sgraf@bethelpark.ne</a>t or <a href='mailto:sdunn@bethelpark.n
+ et'>sdunn@bethelpark.net</a></span></p>\n<div style='clear:both\;'></div><
+ /BODY></HTML>
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-15723@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:Robert Hicks\; rhicks@bethelpark.net
+DESCRIPTION:If you have questions about the meeting\, please contact Robert
+  Hicks at rhicks@bethelpark.net
+DTSTART;TZID=America/New_York:20200601T193000
+DTEND;TZID=America/New_York:20200601T210000
+EXDATE;TZID=America/New_York:20200907T193000
+LOCATION:Municipality of Bethel Park @ 5100 West Library Avenue
+RRULE:FREQ=MONTHLY;BYDAY=1MO
+SEQUENCE:0
+SUMMARY:Zoning Hearing Board Meeting
+URL:https://bethelpark.net/event/zoning-hearing-board-meeting-2/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><p>If you have q
+ uestions about the meeting\, please contact Robert Hicks at <a href='mailt
+ o:rhicks@bethelpark.net'>rhicks@bethelpark.net</a></p>\n<div style='clear:
+ both\;'></div></BODY></HTML>
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-13378@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates\,Council
+CONTACT:Bethel Park Municipal Council\; 412.831.6800\; bpmc@bethelpark.net
+DESCRIPTION:Here is a link to the posted agenda:\nhttps://bethelpark.net/do
+ wnload/agendas/Regular-6-8-20-agenda.pdf\n 
+DTSTART;TZID=America/New_York:20200608T193000
+DTEND;TZID=America/New_York:20200608T210000
+LOCATION:Zoom Virtual Meeting
+SEQUENCE:0
+SUMMARY:Regular Council Meeting
+URL:https://bethelpark.net/event/regular-council-meeting-6/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><p>Here is a lin
+ k to the posted agenda:</p>\n<p><a href='https://bethelpark.net/download/a
+ gendas/Regular-6-8-20-agenda.pdf'>https://bethelpark.net/download/agendas/
+ Regular-6-8-20-agenda.pdf</a></p>\n<p> </p>\n<div style='clear:both\;'></d
+ iv></BODY></HTML>
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-16130@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:Stacey Graf\; 412.831.6800 x130\; planning@bethelpark.net
+DESCRIPTION:NOTICE OF A REZONING REQUEST APPLICATION\nRE: APPLICATION #2020
+ -0137\nA Rezoning Request has been filed by Penn Cove Group Capital\, for 
+ the property located near the intersection of Hamilton Road and Baptist Ro
+ ad. The area proposed to be rezoned is 10.816 acres. The applicant is seek
+ ing to rezone the property from (R-3) One Family Residential to (R-T) Town
+ house Dwelling District. The area requested for the rezoning is indicated 
+ on the map attached with this notice.\nThe Municipality of Bethel Park wil
+ l receive public comment on this application on several occasions. The fir
+ st official meeting will occur before the Bethel Park Planning Commission.
+  A workshop meeting is scheduled for Wednesday\, June 24\, 2020 at 7:00 PM
+  at the Bethel Park Municipal Building\, 5100 West Library Avenue. Formal 
+ comments will be received at the Planning Commission’s Regular Meeting sch
+ eduled for July 8\, 2020 at 7:30 PM at the Bethel Park Municipal Building.
+  All interested persons are invited to attend. The Planning Commission wil
+ l possibly render a recommendation on the application at the July 10\, 202
+ 0 meeting. This recommendation will be made prior to the application being
+  reviewed by the Municipal Council. Prior to rendering a decision\, Counci
+ l will hold a Public Hearing to formally accept public comment. Only after
+  a public hearing can Council take action on this matter. Any questions ca
+ n be directed to Stacey L. Graf\, P.E.\, Director of Engineering\, at 412-
+ 831-6800 x 208 or planning@bethelpark.net\nAn Agenda for this meeting can 
+ be found here
+DTSTART;TZID=America/New_York:20200624T190000
+LOCATION:5100 West Library Ave. Bethel Park\, PA 15102 @ Council Chambers /
+  Zoom Meeting Platform
+SEQUENCE:0
+SUMMARY:Planning & Zoning Commission Workshop Meeting
+URL:https://bethelpark.net/event/planning-zoning-commission-workshop-meetin
+ g-4/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><p>NOTICE OF A R
+ EZONING REQUEST APPLICATION<br />\nRE: APPLICATION #2020-0137</p>\n<p>A Re
+ zoning Request has been filed by Penn Cove Group Capital\, for the propert
+ y located near the intersection of Hamilton Road and Baptist Road. The are
+ a proposed to be rezoned is 10.816 acres. The applicant is seeking to rezo
+ ne the property from (R-3) One Family Residential to (R-T) Townhouse Dwell
+ ing District. The area requested for the rezoning is indicated on the map 
+ attached with this notice.</p>\n<p>The Municipality of Bethel Park will re
+ ceive public comment on this application on several occasions. The first o
+ fficial meeting will occur before the Bethel Park Planning Commission. A w
+ orkshop meeting is scheduled for Wednesday\, June 24\, 2020 at 7:00 PM at 
+ the Bethel Park Municipal Building\, 5100 West Library Avenue. Formal comm
+ ents will be received at the Planning Commission’s Regular Meeting schedul
+ ed for July 8\, 2020 at 7:30 PM at the Bethel Park Municipal Building. All
+  interested persons are invited to attend. The Planning Commission will po
+ ssibly render a recommendation on the application at the July 10\, 2020 me
+ eting. This recommendation will be made prior to the application being rev
+ iewed by the Municipal Council. Prior to rendering a decision\, Council wi
+ ll hold a Public Hearing to formally accept public comment. Only after a p
+ ublic hearing can Council take action on this matter. Any questions can be
+  directed to Stacey L. Graf\, P.E.\, Director of Engineering\, at 412-831-
+ 6800 x 208 or planning@bethelpark.net</p>\n<p>An Agenda for this meeting c
+ an be found <a href='https://bethelpark.net/download/agendas/ag.7-2020-002
+ .pdf'>here</a></p>\n<div style='clear:both\;'></div></BODY></HTML>
+X-INSTANT-EVENT:1
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-15719@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:Stacey Graf\; sgraf@bethelpark.net
+DESCRIPTION:Notice:\nThe PZC Workshop Meeting of May 27th\nand the Regular 
+ (voting) meeting of\nJune 10th have both been cancelled. \nThe next schedu
+ led Meeting is\nJune 24th (workshop meeting).
+DTSTART;TZID=America/New_York:20200624T190000
+DTEND;TZID=America/New_York:20200624T210000
+LOCATION:zoom Virtual Meeting
+RRULE:FREQ=MONTHLY;BYDAY=-1WE
+SEQUENCE:0
+SUMMARY:Planning Commission Committee Meeting
+URL:https://bethelpark.net/event/planning-commission-committee-meeting/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><p>Notice:</p>\n
+ <p>The PZC Workshop Meeting of May 27<sup>th</sup></p>\n<p>and the Regular
+  (voting) meeting of</p>\n<p>June 10<sup>th</sup> <span style='color: #800
+ 000'><strong>have both been cancelled. </strong></span></p>\n<p>The next s
+ cheduled Meeting is</p>\n<p>June 24<sup>th</sup> (workshop meeting).</p>\n
+ <div style='clear:both\;'></div></BODY></HTML>
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-16137@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:
+DESCRIPTION:A joint meeting between Bethel Park Municipal Council\, South P
+ ark Commission and the Bethel Park-South Park Municipal Authority will be 
+ held on Monday\, June 29th at 7 p.m. in Bethel Park Municipal Council Cham
+ bers – 5100 West Library Ave.\, Bethel Park\, 15102.\nThe meeting’s purpos
+ e is to review work that the Municipal Authority has completed over the pa
+ st few years and discuss recent Flow Monitoring Projects along with future
+  proposed projects.  The Authority’s consultant will also present future p
+ lans as well as a potential bond issue.\n \n \n \n \n 
+DTSTART;TZID=America/New_York:20200629T190000
+DTEND;TZID=America/New_York:20200629T213000
+LOCATION:Council Chambers @ Bethel Park Municipal Building\, 5100 West Libr
+ ary Avenue
+SEQUENCE:0
+SUMMARY:Joint meeting between the Bethel Park Municipal Council\, South Par
+ k Commission and Bethel Park-South Park Municipal Authority on June 29th\,
+  7PM.
+URL:https://bethelpark.net/event/joint-meeting-between-the-bethel-park-muni
+ cipal-council-south-park-commission-and-bethel-park-south-park-municipal-a
+ uthority-on-june-29th-7pm/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><p>A joint meeti
+ ng between Bethel Park Municipal Council\, South Park Commission and the B
+ ethel Park-South Park Municipal Authority will be held on Monday\, June 29
+ <sup>th</sup> at 7 p.m. in Bethel Park Municipal Council Chambers – 5100 W
+ est Library Ave.\, Bethel Park\, 15102.</p>\n<p>The meeting’s purpose is t
+ o review work that the Municipal Authority has completed over the past few
+  years and discuss recent Flow Monitoring Projects along with future propo
+ sed projects.  The Authority’s consultant will also present future plans a
+ s well as a potential bond issue.</p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> <
+ /p>\n<p> </p>\n<div style='clear:both\;'></div></BODY></HTML>
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-16072@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:Robert Hicks\; rhicks@bethelpark.net
+DESCRIPTION:“The Zoning Hearing Board of Bethel Park will consider the foll
+ owing matters: (1) dimensional variance to allow window decals with the wo
+ rds “tacos”\, “fajitas”\, etc. on exterior of storefront windows\, Section
+  69.51.1.8\, 4607 Library Road\, Benny Ulloa/Emiliano’s Mexican Restaurant
+ \; (2) dimensional side yard variance (5’ provided\, 10’ required)\, Secti
+ on 69.35.3\, 2647 Broad Street\, Kenneth Nagel\; (3) use variance to allow
+  garden center in Conservation District\, Section 69.34.1\, 30 Corrigan Dr
+ ive\, Debra Galob & Randy Stetor\; (4) dimensional side yard variance to a
+ llow addition\; Section 69.23.4\, 3463 South Park Road\, Morton & Evelyn W
+ ilson\; (5) use variance for take-out restaurant in Conservation District\
+ , Section 69.34.1\, 30 Corrigan Drive\, Bethel Deli\; (6) rear-yard dimens
+ ional variance to add addition\, Section 69.25.4\, 2776 Ohio Street\, Sedi
+ na & Amir Medar.”\n \nA hearing on these matters will be held on Monday\, 
+ July 6\, 2020 at 7:30 p.m. in the Municipal Building at 5100 West Library 
+ Avenue.
+DTSTART;TZID=America/New_York:20200706T193000
+DTEND;TZID=America/New_York:20200706T220000
+LOCATION:Bethel Park Municipal Building Council Chambers @ 5100 West Librar
+ y Road
+SEQUENCE:0
+SUMMARY:Zoning Hearing Board Meeting Monday July 6th\, 2020
+URL:https://bethelpark.net/event/zoning-hearing-board-meeting-monday-july-6
+ th-2020/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><p>“The Zoning H
+ earing Board of Bethel Park will consider the following matters: (1) dimen
+ sional variance to allow window decals with the words “tacos”\, “fajitas”\
+ , etc. on exterior of storefront windows\, Section 69.51.1.8\, 4607 Librar
+ y Road\, Benny Ulloa/Emiliano’s Mexican Restaurant\; (2) dimensional side 
+ yard variance (5’ provided\, 10’ required)\, Section 69.35.3\, 2647 Broad 
+ Street\, Kenneth Nagel\; (3) use variance to allow garden center in Conser
+ vation District\, Section 69.34.1\, 30 Corrigan Drive\, Debra Galob & Rand
+ y Stetor\; (4) dimensional side yard variance to allow addition\; Section 
+ 69.23.4\, 3463 South Park Road\, Morton & Evelyn Wilson\; (5) use variance
+  for take-out restaurant in Conservation District\, Section 69.34.1\, 30 C
+ orrigan Drive\, Bethel Deli\; (6) rear-yard dimensional variance to add ad
+ dition\, Section 69.25.4\, 2776 Ohio Street\, Sedina & Amir Medar.”</p>\n<
+ p> </p>\n<p>A hearing on these matters will be held on Monday\, July 6\, 2
+ 020 at 7:30 p.m. in the Municipal Building at 5100 West Library Avenue.</p
+ >\n<div style='clear:both\;'></div></BODY></HTML>
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-16229@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:
+DESCRIPTION:
+DTSTART;TZID=America/New_York:20200708T193000
+DTEND;TZID=America/New_York:20200708T210000
+SEQUENCE:0
+SUMMARY:Planning & Zoning Commission Meeting
+URL:https://bethelpark.net/event/planning-zoning-commission-meeting/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><div style='clea
+ r:both\;'></div></BODY></HTML>
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-16177@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:Stacey Graf\; 412.831.6800 x208\; Planning@bethelpark.net
+DESCRIPTION:BEE ORDINANCE\nThe Bethel Park Municipal Council will hold a Pu
+ blic Hearing on July 27\, 2020 at 6:30 PM in the Bethel Park Municipal Bui
+ lding\, 5100 West Library Avenue\, Bethel Park\, PA to consider the follow
+ ing:\nAN ORDINANCE OF THE MUNICIPALITY OF BETHEL PARK\, ALLEGHENY COUNTY\,
+  PENNSYLVANIA\, AMENDING THE ZONING ORDINANCE OF BETHEL PARK\, AS CODIFIED
+  AT CHAPTER 69 OF THE BETHEL PARK MUNICIPAL CODE\, BY PROVIDING REGULATION
+ S TO ALLOW BEE TO BE RAISED IN ALL DISTRICTS.\nA copy of the ordinance is 
+ available for review at the Bethel Park Municipal Building at 5100 West Li
+ brary Avenue\, Bethel Park\, PA 15102. Any questions can be directed to St
+ acey L. Graf\, P.E.\, Director of Engineering\, at 412-831-6800 x 208 or p
+ lanning@bethelpark.net.\n \nLINDERMER STREET VACATION\n The Bethel Park Mu
+ nicipal Council will hold a Public Hearing on July 27\, 2020 at 6:31 PM in
+  the Bethel Park Municipal Building\, 5100 West Library Avenue\, Bethel Pa
+ rk\, PA to consider the following:\nAN ORDINANCE OF THE MUNICIPALITY OF BE
+ THEL PARK\, ALLEGHENY COUNTY\, PENNSYLVANIA\, VACATING AN UNOPENED PORTION
+  OF LINDERMER STREET LOCATED OFF OF LIBRARY ROAD\, AND SETTING THE EFFECTI
+ VE DATE OF VACATION.\nA copy of the plan for vacation is available for rev
+ iew at the Bethel Park Municipal Building at 5100 West Library Avenue\, Be
+ thel Park\, PA 15102. Any questions can be directed to Stacey L. Graf\, P.
+ E.\, Director of Engineering\, at 412-831-6800 x 208 or planning@bethelpar
+ k.net.\n \nCOMPREHENSIVE PLAN\n The Bethel Park Municipal Council will hol
+ d a Public Hearing on July 27\, 2020 at 6:32 PM in the Bethel Park Municip
+ al Building\, 5100 West Library Avenue\, Bethel Park\, PA to consider the 
+ following:\nNotice is hereby given that Bethel Park Council will hold a pu
+ blic hearing to receive public comment regarding “Blueprint Bethel Park\,”
+  the Municipality’s Long-Range Comprehensive Plan\, prior to its adoption.
+  The public hearing will take place on Monday\, July 27\, 2020 at 6:32 p.m
+ . in the Council Chambers of the Municipal Building\, 5100 West Library Av
+ enue\, Bethel Park\, PA. The draft plan is available for review at bluepri
+ ntbethelpark.com.\nA copy of the Comprehensive Plan is available for revie
+ w at the Bethel Park Municipal Building at 5100 West Library Avenue\, Beth
+ el Park\, PA 15102 or at blueprintbethelpark.com. Any questions can be dir
+ ected to Stacey L. Graf\, P.E.\, Director of Engineering\, at 412-831-6800
+  x 208 or planning@bethelpark.net.\n Council will then hold a special meet
+ ing immediately following the public hearings to vote on all three items.
+DTSTART;TZID=America/New_York:20200727T183000
+DTEND;TZID=America/New_York:20200727T210000
+LOCATION:Municipal Building Council Chambers @ 5100 West Library Road
+SEQUENCE:0
+SUMMARY:Municipal Council Committee Meeting July 27th\, 2020 7:30 PM – Publ
+ ic Hearings starting at 6:30 PM
+URL:https://bethelpark.net/event/municipal-council-committee-meeting-july-2
+ 7th-2020-730-pm-public-hearings-starting-at-630-pm/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><p><u>BEE ORDINA
+ NCE</u></p>\n<p>The Bethel Park Municipal Council will hold a Public Heari
+ ng on July 27\, 2020 at 6:30 PM in the Bethel Park Municipal Building\, 51
+ 00 West Library Avenue\, Bethel Park\, PA to consider the following:</p>\n
+ <p>AN ORDINANCE OF THE MUNICIPALITY OF BETHEL PARK\, ALLEGHENY COUNTY\, PE
+ NNSYLVANIA\, AMENDING THE ZONING ORDINANCE OF BETHEL PARK\, AS CODIFIED AT
+  CHAPTER 69 OF THE BETHEL PARK MUNICIPAL CODE\, BY PROVIDING REGULATIONS T
+ O ALLOW BEE TO BE RAISED IN ALL DISTRICTS.</p>\n<p>A copy of the ordinance
+  is available for review at the Bethel Park Municipal Building at 5100 Wes
+ t Library Avenue\, Bethel Park\, PA 15102. Any questions can be directed t
+ o Stacey L. Graf\, P.E.\, Director of Engineering\, at 412-831-6800 x 208 
+ or <a href='mailto:planning@bethelpark.net'>planning@bethelpark.net</a>.</
+ p>\n<p> </p>\n<p><u>LINDERMER STREET VACATION</u></p>\n<p><u> </u>The Beth
+ el Park Municipal Council will hold a Public Hearing on July 27\, 2020 at 
+ 6:31 PM in the Bethel Park Municipal Building\, 5100 West Library Avenue\,
+  Bethel Park\, PA to consider the following:</p>\n<p>AN ORDINANCE OF THE M
+ UNICIPALITY OF BETHEL PARK\, ALLEGHENY COUNTY\, PENNSYLVANIA\, VACATING AN
+  UNOPENED PORTION OF LINDERMER STREET LOCATED OFF OF LIBRARY ROAD\, AND SE
+ TTING THE EFFECTIVE DATE OF VACATION.</p>\n<p>A copy of the plan for vacat
+ ion is available for review at the Bethel Park Municipal Building at 5100 
+ West Library Avenue\, Bethel Park\, PA 15102. Any questions can be directe
+ d to Stacey L. Graf\, P.E.\, Director of Engineering\, at 412-831-6800 x 2
+ 08 or <a href='mailto:planning@bethelpark.net'>planning@bethelpark.net</a>
+ .</p>\n<p><u> </u></p>\n<p><u>COMPREHENSIVE PLAN</u></p>\n<p><u> </u>The B
+ ethel Park Municipal Council will hold a Public Hearing on July 27\, 2020 
+ at 6:32 PM in the Bethel Park Municipal Building\, 5100 West Library Avenu
+ e\, Bethel Park\, PA to consider the following:</p>\n<p>Notice is hereby g
+ iven that Bethel Park Council will hold a public hearing to receive public
+  comment regarding “<a href='http://blueprintbp.mystrikingly.com/'>Bluepri
+ nt Bethel Park</a>\,” the Municipality’s Long-Range Comprehensive Plan\, p
+ rior to its adoption. The public hearing will take place on Monday\, July 
+ 27\, 2020 at 6:32 p.m. in the Council Chambers of the Municipal Building\,
+  5100 West Library Avenue\, Bethel Park\, PA. The draft plan is available 
+ for review at <a href='http://blueprintbp.mystrikingly.com/'>blueprintbeth
+ elpark.com</a>.</p>\n<p>A copy of the Comprehensive Plan is available for 
+ review at the Bethel Park Municipal Building at 5100 West Library Avenue\,
+  Bethel Park\, PA 15102 or at blueprintbethelpark.com. Any questions can b
+ e directed to Stacey L. Graf\, P.E.\, Director of Engineering\, at 412-831
+ -6800 x 208 or <a href='mailto:planning@bethelpark.net'>planning@bethelpar
+ k.net</a>.</p>\n<p><u> </u>Council will then hold a special meeting immedi
+ ately following the public hearings to vote on all three items.</p>\n<div 
+ style='clear:both\;'></div></BODY></HTML>
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-16422@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:
+DESCRIPTION:Meeting Agenda
+DTSTART;TZID=America/New_York:20200729T190000
+LOCATION:5100 West Library Ave. Bethel Park\, PA 15102 @ Council Chambers
+SEQUENCE:0
+SUMMARY:Planning & Zoning Commission Workshop Meeting
+URL:https://bethelpark.net/event/planning-zoning-commission-workshop-meetin
+ g-5/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><p><a href='http
+ s://bethelpark.net/download/agendas/planning_and_zoning_commission/REVISED
+ -ag.8-2020.pdf'>Meeting Agenda</a></p>\n<div style='clear:both\;'></div></
+ BODY></HTML>
+X-INSTANT-EVENT:1
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-13431@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:
+DESCRIPTION:
+DTSTART;TZID=America/New_York:20200908T193000
+LOCATION:5100 West Library Ave. Bethel Park\, PA 15102 @ Council Chambers
+SEQUENCE:0
+SUMMARY:Zoning Hearing Board
+URL:https://bethelpark.net/event/zoning-hearing-board/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><div style='clea
+ r:both\;'></div></BODY></HTML>
+X-INSTANT-EVENT:1
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-13456@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:
+DESCRIPTION:
+DTSTART;TZID=America/New_York:20200916T183000
+LOCATION:Municipal Building Council Chambers @ 5100 West Library Ave Bethel
+  Park PA 15102
+SEQUENCE:0
+SUMMARY:Shade Tree Commission Meeting
+URL:https://bethelpark.net/event/13456/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><div style='clea
+ r:both\;'></div></BODY></HTML>
+X-INSTANT-EVENT:1
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-13457@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:
+DESCRIPTION:
+DTSTART;TZID=America/New_York:20201118T183000
+LOCATION:Municipal Building Council Chambers @ 5100 West Library Ave Bethel
+  Park\, PA 15102
+SEQUENCE:0
+SUMMARY:Shade Tree Commission Meeting
+URL:https://bethelpark.net/event/shade-tree-commission-meeting-3/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><div style='clea
+ r:both\;'></div></BODY></HTML>
+X-INSTANT-EVENT:1
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-13426@bethelpark.net
+DTSTAMP:20200823T085254Z
+CATEGORIES;LANGUAGE=en-US:Board/Commission Meeting Dates
+CONTACT:
+DESCRIPTION:
+DTSTART;TZID=America/New_York:20210127T193000
+EXDATE;TZID=America/New_York:20200518T193000
+LOCATION:Council Caucus Room @ 5100 West Library Ave. Bethel Park\, PA 1510
+ 2
+RRULE:FREQ=MONTHLY;BYDAY=4MO
+SEQUENCE:0
+SUMMARY:Council Committee Meeting
+URL:https://bethelpark.net/event/council-committee-meeting-5/
+X-COST-TYPE:free
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><div style='clea
+ r:both\;'></div></BODY></HTML>
+X-INSTANT-EVENT:1
+END:VEVENT
+END:VCALENDAR

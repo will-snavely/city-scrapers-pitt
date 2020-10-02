@@ -7,6 +7,7 @@ name = "pypi"
 city-scrapers-core = {extras = ["aws"],version = "*"}
 esprima = "*"
 icalendar = "*"
+ics = "*"
 legistar = {git = "https://github.com/opencivicdata/python-legistar-scraper"}
 python-dateutil = "*"
 pytz = "*"
@@ -22,5 +23,3 @@ black = "==19.10b0"
 freezegun = "*"
 pathlib2 = {version = "*",python_version = "< '3.6'"}
 pytest = "*"
-
-
