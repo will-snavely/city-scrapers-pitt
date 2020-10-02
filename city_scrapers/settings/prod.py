@@ -41,10 +41,10 @@ FEED_STORAGES = {
 AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
 
-CITY_SCRAPERS_STATUS_BUCKET = "city-scrapers-pitt"
+CITY_SCRAPERS_STATUS_BUCKET = "city-scrapers-pitt-wsnavely"
 
 # Uncomment the FEED_URI for whichever provider you're using
 
 FEED_URI = (
-    "s3://city-scrapers-pitt/%(year)s/%(month)s/%(day)s/%(hour_min)s/%(name)s.json"
+    "s3://city-scrapers-pitt-wsnavely/%(year)s/%(month)s/%(day)s/%(hour_min)s/%(name)s.json"
 )
