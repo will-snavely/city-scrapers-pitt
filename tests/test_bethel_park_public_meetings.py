@@ -54,7 +54,7 @@ def test_titles():
 
 
 def test_start():
-    tzinfo = tz.gettz("America/New_York")
+    tzinfo = None
     expected_start_dates = [
         datetime(year=2021, month=1, day=27, hour=19, minute=30, tzinfo=tzinfo),
         datetime(year=2020, month=11, day=18, hour=18, minute=30, tzinfo=tzinfo),
@@ -77,14 +77,14 @@ def test_end():
     # with an end time equal to the start time. In this case, the spider sets "None"
     # for the end time so that the scrapy pipeline can fill it a default. Only the
     # six event has a different end date set, in this specific data set.
-    tzinfo = tz.gettz("America/New_York")
+    tzinfo = None
     expected_end_dates = [
         None,
         None,
         None,
         None,
         None,
-        datetime(year=2020, month=7, day=27, hour=21, minute=00, tzinfo=tzinfo),
+        datetime(year=2020, month=7, day=27, hour=18, minute=30, tzinfo=tzinfo),
     ]
     for (event, expected_end) in zip(get_test_sample(), expected_end_dates):
         if expected_end is None:
@@ -113,7 +113,7 @@ def test_location():
         "Municipal Building Council Chambers @ 5100 West Library Road",
     ]
     for (event, expected_location) in zip(get_test_sample(), expected_locations):
-        assert event["location"] == expected_location
+        assert event["location"]["address"] == expected_location
 
 
 def test_classification():
@@ -130,16 +130,21 @@ def test_all_day():
         assert item["all_day"] is False
 
 
+def test_meeting_ids():
+    for item in parsed_items:
+        assert item["id"] is not None
+
+
 def test_description():
     with open(join(dirname(__file__), "files", "bethel_park", "long_description")) as f:
         long_description = f.read()
 
     expected_descriptions = [
         # Some meetings are missing a description
-        None,
-        None,
-        None,
-        None,
+        "",
+        "",
+        "",
+        "",
         "Meeting Agenda",
         # This meeting has a very length description that we store in a file to keep this
         # test class a little neater

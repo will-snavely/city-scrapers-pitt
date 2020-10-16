@@ -36,10 +36,12 @@ class PittHousingSpider(CityScrapersSpider):
                     end=None,
                     all_day=False,
                     time_notes="",
-                    location={"address": location_str.strip()},
+                    location={"address": location_str.strip(), "name": ""},
                     links=[],
                     source=response.url,
                 )
+                meeting["status"] = self._get_status(meeting)
+                meeting["id"] = self._get_id(meeting)
                 yield meeting
 
     def _parse_title(self, _):

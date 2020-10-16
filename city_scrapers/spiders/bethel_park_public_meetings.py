@@ -50,7 +50,7 @@ class BethelParkSpider(CityScrapersSpider):
         3. Strip extra space from each line of text.
         """
         if not s:
-            return None
+            return ""
         unicode_normalized = unicodedata.normalize("NFKD", s).strip()
         stripped_lines = [line.strip() for line in unicode_normalized.split("\n")]
         return "\n".join(stripped_lines)
@@ -71,7 +71,7 @@ class BethelParkSpider(CityScrapersSpider):
         ics_calendar = ics.Calendar(raw_calendar)
 
         for event in ics_calendar.events:
-            yield Meeting(
+            meeting = Meeting(
                 title=self.normalize(event.name),
                 description=self.normalize(event.description),
                 classification=NOT_CLASSIFIED,
@@ -79,14 +79,17 @@ class BethelParkSpider(CityScrapersSpider):
                 end=self._parse_end(event),
                 all_day=False,
                 time_notes=None,
-                location=self.normalize(event.location),
+                location={"address": self.normalize(event.location), "name": ""},
                 links=[],
                 source=event.url,
             )
+            meeting["status"] = self._get_status(meeting)
+            meeting["id"] = self._get_id(meeting)
+            yield meeting
 
     def _parse_start(self, event):
         if event.begin:
-            return event.begin.datetime
+            return event.begin.datetime.replace(tzinfo=None)
         return None
 
     def _parse_end(self, event):
@@ -97,5 +100,5 @@ class BethelParkSpider(CityScrapersSpider):
             if event.begin == event.end:
                 return None
             else:
-                return event.end.datetime
+                return event.begin.datetime.replace(tzinfo=None)
         return None

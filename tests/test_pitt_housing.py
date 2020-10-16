@@ -74,6 +74,7 @@ def test_location():
     idx = 0
     for item in parsed_items:
         assert item["location"]["address"] == expected_locations[idx]
+        assert item["location"]["name"] == ""
         idx += 1
 
 
@@ -87,9 +88,6 @@ def test_all_day():
         assert item["all_day"] is False
 
 
-# The 'id' or 'source' fields aren't customized currently, so these are commented out.
-# def test_id():
-#     assert parsed_items[0]["id"] == "EXPECTED ID"
-
-# def test_source():
-#     assert parsed_items[0]["source"] == "EXPECTED URL"
+def test_meeting_ids():
+    for item in parsed_items:
+        assert item["id"] is not None
