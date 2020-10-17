@@ -74,6 +74,12 @@ class GoogleCalendarSpider(CityScrapersSpider):
             "name": ""
         }
 
+    def get_links(self, event: dict) -> list:
+        return []
+
+    def get_source(self, event: dict) -> Optional[str]:
+        return event.get("htmlLink")
+
     def google_calendar_event_to_meeting(self, event: dict) -> Optional[Meeting]:
         meeting = Meeting(
             title=self.get_title(event) or "",
@@ -84,8 +90,8 @@ class GoogleCalendarSpider(CityScrapersSpider):
             all_day=self.get_all_day(event),
             time_notes=self.get_time_notes(event),
             location=self.get_location(event),
-            links=[],
-            source=None,
+            links=self.get_links(event),
+            source=self.get_source(event),
         )
 
         meeting["status"] = self._get_status(meeting)
