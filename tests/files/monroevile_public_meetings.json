@@ -1,0 +1,163 @@
+{
+ "kind": "calendar#events",
+ "etag": "\"p33oblhs7pu8uo0g\"",
+ "summary": "Monroeville Meetings Calendar",
+ "description": "Municipality of Monroeville Meetings Calendar",
+ "updated": "2020-09-30T19:31:07.846Z",
+ "timeZone": "America/New_York",
+ "accessRole": "reader",
+ "defaultReminders": [],
+ "nextPageToken": "CigKGjBiNHZybmJzYTVzN2k2amxsdTZuZm9xMTZhGAEggICAzP_K3_4WGg0IABIAGPC6x4fPkewCIgcIBBC0gYAM",
+ "items": [
+  {
+   "kind": "calendar#event",
+   "etag": "\"3159750102212000\"",
+   "id": "0issm294apenebdb7f737qs90e",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=MGlzc20yOTRhcGVuZWJkYjdmNzM3cXM5MGUgbXVuaWNpcGFsaXR5b2Ztb25yb2V2aWxsZUBt&ctz=America/New_York",
+   "created": "2020-01-24T14:10:51.000Z",
+   "updated": "2020-01-24T14:10:51.106Z",
+   "summary": "Planning Commission Work Session",
+   "description": "Council Conference Room",
+   "location": "2700 Monroeville Blvd. Monroeville, PA 15146",
+   "creator": {
+    "email": "municipalityofmonroeville@gmail.com",
+    "self": true
+   },
+   "organizer": {
+    "email": "municipalityofmonroeville@gmail.com",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2020-05-20T19:00:00-04:00"
+   },
+   "end": {
+    "dateTime": "2020-05-20T20:30:00-04:00"
+   },
+   "iCalUID": "0issm294apenebdb7f737qs90e@google.com",
+   "sequence": 0,
+   "guestsCanInviteOthers": false,
+   "guestsCanSeeOtherGuests": false
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"3159750133552000\"",
+   "id": "0m7i2dkvi8ocatvl77k26o4esj",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=MG03aTJka3ZpOG9jYXR2bDc3azI2bzRlc2ogbXVuaWNpcGFsaXR5b2Ztb25yb2V2aWxsZUBt&ctz=America/New_York",
+   "created": "2020-01-24T14:11:06.000Z",
+   "updated": "2020-01-24T14:11:06.776Z",
+   "summary": "Planning Commission Work Session",
+   "description": "Council Conference Room",
+   "location": "2700 Monroeville Blvd. Monroeville, PA 15146",
+   "creator": {
+    "email": "municipalityofmonroeville@gmail.com",
+    "self": true
+   },
+   "organizer": {
+    "email": "municipalityofmonroeville@gmail.com",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2020-06-17T19:00:00-04:00"
+   },
+   "end": {
+    "dateTime": "2020-06-17T20:30:00-04:00"
+   },
+   "iCalUID": "0m7i2dkvi8ocatvl77k26o4esj@google.com",
+   "sequence": 0,
+   "guestsCanInviteOthers": false,
+   "guestsCanSeeOtherGuests": false
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"3159750161158000\"",
+   "id": "1kctd7e1j4h4t8qeeu176q64rn",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=MWtjdGQ3ZTFqNGg0dDhxZWV1MTc2cTY0cm4gbXVuaWNpcGFsaXR5b2Ztb25yb2V2aWxsZUBt&ctz=America/New_York",
+   "created": "2020-01-24T14:11:20.000Z",
+   "updated": "2020-01-24T14:11:20.579Z",
+   "summary": "Planning Commission Work Session",
+   "description": "Council Conference Room",
+   "location": "2700 Monroeville Blvd. Monroeville, PA 15146",
+   "creator": {
+    "email": "municipalityofmonroeville@gmail.com",
+    "self": true
+   },
+   "organizer": {
+    "email": "municipalityofmonroeville@gmail.com",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2020-07-15T19:00:00-04:00"
+   },
+   "end": {
+    "dateTime": "2020-07-15T20:30:00-04:00"
+   },
+   "iCalUID": "1kctd7e1j4h4t8qeeu176q64rn@google.com",
+   "sequence": 0,
+   "guestsCanInviteOthers": false,
+   "guestsCanSeeOtherGuests": false
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"3159750186556000\"",
+   "id": "7lcu4fokvkhjrrs9oo4ahlpib6",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=N2xjdTRmb2t2a2hqcnJzOW9vNGFobHBpYjYgbXVuaWNpcGFsaXR5b2Ztb25yb2V2aWxsZUBt&ctz=America/New_York",
+   "created": "2020-01-24T14:11:33.000Z",
+   "updated": "2020-01-24T14:11:33.278Z",
+   "summary": "Planning Commission Work Session",
+   "description": "Council Conference Room",
+   "location": "2700 Monroeville Blvd. Monroeville, PA 15146",
+   "creator": {
+    "email": "municipalityofmonroeville@gmail.com",
+    "self": true
+   },
+   "organizer": {
+    "email": "municipalityofmonroeville@gmail.com",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2020-08-19T19:00:00-04:00"
+   },
+   "end": {
+    "dateTime": "2020-08-19T20:30:00-04:00"
+   },
+   "iCalUID": "7lcu4fokvkhjrrs9oo4ahlpib6@google.com",
+   "sequence": 0,
+   "guestsCanInviteOthers": false,
+   "guestsCanSeeOtherGuests": false
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"3159750278960000\"",
+   "id": "0b4vrnbsa5s7i6jllu6nfoq16a",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=MGI0dnJuYnNhNXM3aTZqbGx1Nm5mb3ExNmEgbXVuaWNpcGFsaXR5b2Ztb25yb2V2aWxsZUBt&ctz=America/New_York",
+   "created": "2020-01-24T14:12:19.000Z",
+   "updated": "2020-01-24T14:12:19.480Z",
+   "summary": "Planning Commission Work Session",
+   "description": "Council Conference Room",
+   "location": "2700 Monroeville Blvd. Monroeville, PA 15146",
+   "creator": {
+    "email": "municipalityofmonroeville@gmail.com",
+    "self": true
+   },
+   "organizer": {
+    "email": "municipalityofmonroeville@gmail.com",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2020-10-21T19:00:00-04:00"
+   },
+   "end": {
+    "dateTime": "2020-10-21T20:30:00-04:00"
+   },
+   "iCalUID": "0b4vrnbsa5s7i6jllu6nfoq16a@google.com",
+   "sequence": 0,
+   "guestsCanInviteOthers": false,
+   "guestsCanSeeOtherGuests": false
+  }
+ ]
+}
