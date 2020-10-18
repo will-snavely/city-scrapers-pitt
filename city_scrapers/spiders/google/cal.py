@@ -69,7 +69,7 @@ class GoogleCalendarSpider(CityScrapersSpider):
         # If the request succeeds, the "on_events_received" callback is invoked
         return [Request(url=events_request.uri, callback=self.on_events_received)]
 
-    def on_events_received(self, response: Response):
+    def on_events_received(self, response: Response, fetch_next=True):
         """Handle a successful invocation of the Google Calendar API"""
         body = json.loads(response.body)
         events = body.get("items")
@@ -83,7 +83,7 @@ class GoogleCalendarSpider(CityScrapersSpider):
         # There might be multiple pages of results. We handle that case here,
         # "recursively" invoking this callback until there are no more pages.
         next_page = body.get("nextPageToken")
-        if next_page:
+        if fetch_next and next_page:
             self.logger.info("Processing the next page of Google calendar events.")
             events_request = self.google_service.events().list(
                 calendarId=self.calendar_id,
@@ -105,13 +105,13 @@ class GoogleCalendarSpider(CityScrapersSpider):
         meeting = Meeting(
             title=self.get_title(event) or "",
             description=self.get_description(event) or "",
-            classification=self.get_classification(event),
+            classification=self.get_classification(event) or NOT_CLASSIFIED,
             start=self.get_start(event),
             end=self.get_end(event),
             all_day=self.get_all_day(event),
-            time_notes=self.get_time_notes(event),
+            time_notes=self.get_time_notes(event) or "",
             location=self.get_location(event),
-            links=self.get_links(event),
+            links=self.get_links(event) or [],
             source=self.get_source(event),
         )
 
@@ -139,10 +139,10 @@ class GoogleCalendarSpider(CityScrapersSpider):
         # this seems to be expected by the City Scraper Meeting pipeline
         if time_field:
             if "dateTime" in time_field:
-                dt = start.get("dateTime")
+                dt = time_field.get("dateTime")
                 return dateutil.parser.parse(dt).replace(tzinfo=None)
-            elif "date" in start:
-                date = start.get("date")
+            elif "date" in time_field:
+                date = time_field.get("date")
                 return dateutil.parser.parse(date).replace(tzinfo=None)
         return None
 
