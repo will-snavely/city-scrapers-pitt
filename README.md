@@ -14,4 +14,4 @@ The meetings collected by this project is posted to this [calendar](https://pgh-
 
 ## Join our community
 
-- [Fill out this form](https://airtable.com/shrRv027NLgToRFd6) to join our [Slack channel](https://citybureau.slack.com/#labs_city_scrapers)
+- [Fill out this form](https://airtable.com/shrRv027NLgToRFd6) to join our [Slack channel](https://citybureau.slack.com/#labs_city_scrapers) 
