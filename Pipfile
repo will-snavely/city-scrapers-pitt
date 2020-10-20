@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 city-scrapers-core = {extras = ["aws"],version = "*"}
 esprima = "*"
+google-api-python-client = "*"
 icalendar = "*"
 ics = "*"
 legistar = {git = "https://github.com/opencivicdata/python-legistar-scraper"}
