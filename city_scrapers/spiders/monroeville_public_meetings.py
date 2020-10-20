@@ -25,6 +25,7 @@ from city_scrapers.spiders.google.cal import GoogleCalendarSpider
 import scrapy
 import dateutil
 
+
 class MonroevillePublicMeetings(GoogleCalendarSpider):
     name = "monroeville_public_meetings"
     agency = "Municipality of Monroeville"
@@ -37,9 +38,10 @@ class MonroevillePublicMeetings(GoogleCalendarSpider):
 
         if "GOOGLE_API_KEY" not in os.environ:
             raise RuntimeError(
-                    "This spider requires a Google API key to be stored " 
-                    "in the environment variable 'GOOGLE_API_KEY'")
-        google_api_key = os.environ["GOOGLE_API_KEY"] 
+                "This spider requires a Google API key to be stored "
+                "in the environment variable 'GOOGLE_API_KEY'"
+            )
+        google_api_key = os.environ["GOOGLE_API_KEY"]
         request_params = {
             "singleEvents": True,
             "timeZone": self.timezone,
@@ -48,8 +50,5 @@ class MonroevillePublicMeetings(GoogleCalendarSpider):
             "timeMax": time_max,
         }
         super().__init__(
-                google_api_key,
-                self.CALENDAR_ID,
-                request_params,
-                *args, 
-                **kwargs)
+            google_api_key, self.CALENDAR_ID, request_params, *args, **kwargs
+        )

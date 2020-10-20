@@ -16,13 +16,17 @@ spider = MonroevillePublicMeetings()
 freezer = freeze_time("2020-10-18")
 freezer.start()
 
-parsed_items = [item for item in spider.on_events_received(test_response, fetch_next=False)]
+parsed_items = [
+    item for item in spider.on_events_received(test_response, fetch_next=False)
+]
 freezer.stop()
+
 
 def test_title():
     expected_titles = ["Planning Commission Work Session"] * 5
     actual_titles = [meeting["title"] for meeting in parsed_items]
     assert expected_titles == actual_titles
+
 
 def test_start():
     expected_start_dates = {
@@ -33,9 +37,7 @@ def test_start():
         datetime(year=2020, month=10, day=21, hour=19, minute=0),
     }
 
-    actual_start_dates = {
-        meeting["start"] for meeting in parsed_items 
-    }
+    actual_start_dates = {meeting["start"] for meeting in parsed_items}
 
     assert expected_start_dates == actual_start_dates
 
@@ -49,10 +51,9 @@ def test_end():
         datetime(year=2020, month=10, day=21, hour=20, minute=30),
     }
 
-    actual_end_dates = {
-        meeting["end"] for meeting in parsed_items 
-    }
+    actual_end_dates = {meeting["end"] for meeting in parsed_items}
     assert expected_end_dates == actual_end_dates
+
 
 def test_time_notes():
     for item in parsed_items:

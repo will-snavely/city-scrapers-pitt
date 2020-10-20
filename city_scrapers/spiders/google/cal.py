@@ -16,13 +16,11 @@ import dateutil
 from scrapy.http import Request, Response
 from googleapiclient.discovery import build
 
+
 class GoogleCalendarSpider(CityScrapersSpider):
     def __init__(
-            self,
-            api_key: str, 
-            calendar_id: str,
-            query_params: dict,
-            *args, **kwargs):
+        self, api_key: str, calendar_id: str, query_params: dict, *args, **kwargs
+    ):
         """Construct a GoogleCalendarSpider
 
         Args:
@@ -43,7 +41,7 @@ class GoogleCalendarSpider(CityScrapersSpider):
         super().__init__(*args, **kwargs)
         self.api_key = api_key
         self.calendar_id = calendar_id
-        self.google_service = build('calendar', 'v3', developerKey=self.api_key)
+        self.google_service = build("calendar", "v3", developerKey=self.api_key)
         self.query_params = query_params
 
     def start_requests(self) -> Request:
@@ -57,14 +55,13 @@ class GoogleCalendarSpider(CityScrapersSpider):
         """
 
         # This is a little awkward; we use the google api library to create
-        # the request URL, but use Scrapy to actually issue the request. This 
+        # the request URL, but use Scrapy to actually issue the request. This
         # seemed like a reasonable compromise; it avoids having to build the
         # request manually. But perhaps we shouldn't be using Scrapy here,
         # at all.
         events_request = self.google_service.events().list(
-            calendarId=self.calendar_id,
-            pageToken=None,
-            **self.query_params)
+            calendarId=self.calendar_id, pageToken=None, **self.query_params
+        )
 
         # If the request succeeds, the "on_events_received" callback is invoked
         return [Request(url=events_request.uri, callback=self.on_events_received)]
@@ -86,9 +83,8 @@ class GoogleCalendarSpider(CityScrapersSpider):
         if fetch_next and next_page:
             self.logger.info("Processing the next page of Google calendar events.")
             events_request = self.google_service.events().list(
-                calendarId=self.calendar_id,
-                pageToken=next_page,
-                **self.query_params)
+                calendarId=self.calendar_id, pageToken=next_page, **self.query_params
+            )
             yield Request(url=events_request.uri, callback=self.on_events_received)
         else:
             self.logger.info("No more pages.")
@@ -135,7 +131,7 @@ class GoogleCalendarSpider(CityScrapersSpider):
 
     def google_time_to_meeting_time(self, time_field):
         """Convert a Google Calendar event time to a Meeting-appropriate format"""
-        # Note that we remove timezone info (tzinfo=None), since 
+        # Note that we remove timezone info (tzinfo=None), since
         # this seems to be expected by the City Scraper Meeting pipeline
         if time_field:
             if "dateTime" in time_field:
@@ -153,7 +149,7 @@ class GoogleCalendarSpider(CityScrapersSpider):
     def get_end(self, event: dict) -> Optional[datetime]:
         """Extract a meeting end time from a Google Calendar event"""
         return self.google_time_to_meeting_time(event.get("end"))
-    
+
     def get_all_day(self, event: dict) -> bool:
         """Determine whether the event is all day"""
         # If the start date is a "date" instead of a datetime, conclude that
@@ -163,19 +159,16 @@ class GoogleCalendarSpider(CityScrapersSpider):
 
     def get_time_notes(self, event: dict) -> Optional[str]:
         """Extract meeting time notes from a Google Calendar event"""
-        # A no-op; override if needed 
+        # A no-op; override if needed
         return None
 
     def get_location(self, event: dict) -> dict:
         """Extract a meeting location from a Google Calendar event"""
-        return {
-            "address": event.get("location"),
-            "name": ""
-        }
+        return {"address": event.get("location"), "name": ""}
 
     def get_links(self, event: dict) -> list:
         """Extract meeting links from a Google Calendar event"""
-        # A no-op; override if needed 
+        # A no-op; override if needed
         return []
 
     def get_source(self, event: dict) -> Optional[str]:
