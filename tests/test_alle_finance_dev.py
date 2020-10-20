@@ -17,7 +17,7 @@ test_response = file_response(
 )
 spider = AlleFinanceDevSpider()
 
-freezer = freeze_time("2020-02-14")
+freezer = freeze_time("2020-10-03")
 freezer.start()
 
 parsed_items = [item for item in spider.parse(test_response)]
@@ -36,7 +36,7 @@ def test_description():
 
 
 def test_start():
-    assert parsed_items[0]["start"] == datetime(2020, 1, 28, 9, 30)
+    assert parsed_items[0]["start"] == datetime(2020, 10, 27, 9, 30)
 
 
 def test_end():
@@ -49,13 +49,13 @@ def test_time_notes():
 
 def test_id():
     assert parsed_items[0]["id"] == (
-        "alle_finance_dev/202001280930/x/"
+        "alle_finance_dev/202010270930/x/"
         + "allegheny_county_finance_and_development_commission_meeting"
     )
 
 
 def test_status():
-    assert parsed_items[0]["status"] == "passed"
+    assert parsed_items[0]["status"] == "tentative"
 
 
 def test_location():
