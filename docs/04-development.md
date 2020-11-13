@@ -244,10 +244,9 @@ This is normal since you have not written any tests for your new spider and the 
 
 #### 6. Run linting and style-checking tools
 
-We use [`isort`](https://isort.readthedocs.io/en/stable/), and [`black`](https://github.com/psf/black) to check that all code is written in the proper style. To run these tools individually, you can run the following commands:
+We use [`black`](https://github.com/psf/black) to check that all code is written in the proper style. To run these tools individually, you can run the following commands:
 
 ```bash
-(city-scrapers-pitt)$ isort
 (city-scrapers-pitt)$ black .
 ```
 

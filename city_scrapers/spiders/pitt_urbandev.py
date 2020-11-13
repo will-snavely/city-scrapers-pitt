@@ -71,6 +71,7 @@ class PittUrbandevSpider(CityScrapersSpider):
             """Parse start datetime as a naive datetime object."""
             raw = item.split("</h6>")[0]
             raw = re.sub("<h6>", "", raw)
+            raw = re.match(r".+ [0-9]+, [0-9]+", raw)[0]
             start_time = datetime.strptime(raw, "%B %d, %Y")
 
             if EXPECTED_START_HOUR in start_hour:
