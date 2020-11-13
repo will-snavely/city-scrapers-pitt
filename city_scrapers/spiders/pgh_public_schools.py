@@ -1,9 +1,11 @@
 from datetime import datetime
 from json import loads
+from re import compile, findall
 
 from city_scrapers_core.constants import BOARD
 from city_scrapers_core.items import Meeting
 from city_scrapers_core.spiders import CityScrapersSpider
+
 from scrapy import Request
 
 
@@ -91,7 +93,7 @@ class PghPublicSchoolsSpider(CityScrapersSpider):
             time_notes=self._parse_time_notes(item),
             location=self._parse_location(item),
             links=self._parse_links(item),
-            source=self._parse_source(response),
+            source=self._parse_source(item),
         )
 
         meeting["status"] = self._get_status(meeting)
@@ -142,9 +144,28 @@ class PghPublicSchoolsSpider(CityScrapersSpider):
 
     def _parse_links(self, item):
         """Parse or generate links."""
-        return [{"href": "", "title": ""}]
+        regex = compile(r"<a\s+(?:[^>]*?\s+)?href=([\"\'])(.*?)\1.*\>(.*)<\/a>")
+        links = [
+            {"href": href, "title": title}
+            for (_, href, title) in findall(regex, item["Event"]["Description"])
+        ]
+        for link in links:
+            if link["href"][0] == "/":
+                link["href"] = "https://www.pghschools.org" + link["href"]
+        return links
 
-    def _parse_source(self, response):
+    def _parse_source(self, item):
         """Parse or generate source."""
         # https://www.pghschools.org/calendar#calendar1/20190205/event/19034
-        return response.url
+        date_raw = item["StartDate"]
+        date_object = datetime.strptime(date_raw, "%Y-%m-%dT%H:%M:%S")
+        date_formatted = (
+            str(date_object.year)
+            + str(date_object.month).zfill(2)
+            + str(date_object.day).zfill(2)
+        )
+        source = "https://www.pghschools.org/Page/60#calendar66/{}/event/{}".format(
+            date_formatted, item["Id"]
+        )
+
+        return source
