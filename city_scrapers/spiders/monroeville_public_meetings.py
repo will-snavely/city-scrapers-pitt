@@ -32,16 +32,18 @@ class MonroevillePublicMeetings(GoogleCalendarSpider):
     timezone = "America/New_York"
     CALENDAR_ID = "municipalityofmonroeville@gmail.com"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, google_api_key=None, *args, **kwargs):
         time_min = (datetime.utcnow() - timedelta(days=180)).isoformat() + "Z"
         time_max = (datetime.utcnow() + timedelta(days=180)).isoformat() + "Z"
 
-        if "GOOGLE_API_KEY" not in os.environ:
-            raise RuntimeError(
-                "This spider requires a Google API key to be stored "
-                "in the environment variable 'GOOGLE_API_KEY'"
-            )
-        google_api_key = os.environ["GOOGLE_API_KEY"]
+        if google_api_key is None:
+            if "GOOGLE_API_KEY" not in os.environ:
+                raise RuntimeError(
+                    "This spider requires a Google API key to be stored "
+                    "in the environment variable 'GOOGLE_API_KEY'"
+                )
+            google_api_key = os.environ["GOOGLE_API_KEY"]
+
         request_params = {
             "singleEvents": True,
             "timeZone": self.timezone,

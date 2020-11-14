@@ -41,8 +41,8 @@ class GoogleCalendarSpider(CityScrapersSpider):
         super().__init__(*args, **kwargs)
         self.api_key = api_key
         self.calendar_id = calendar_id
-        self.google_service = build("calendar", "v3", developerKey=self.api_key)
         self.query_params = query_params
+        self.google_service = None
 
     def start_requests(self) -> Request:
         """Initiate requests to the Google Calendar API.
@@ -53,6 +53,9 @@ class GoogleCalendarSpider(CityScrapersSpider):
         that's needed, consider basing your spider on `CityScrapersSpider`
         instead.
         """
+
+        # Authenticate with the Google calendar API
+        self.google_service = build("calendar", "v3", developerKey=self.api_key)
 
         # This is a little awkward; we use the google api library to create
         # the request URL, but use Scrapy to actually issue the request. This

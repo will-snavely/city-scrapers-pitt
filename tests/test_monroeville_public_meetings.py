@@ -11,7 +11,8 @@ test_response = file_response(
     join(dirname(__file__), "files", "monroevile_public_meetings.json"),
     url="https://www.googleapis.com/calendar/v3/calendars/",
 )
-spider = MonroevillePublicMeetings()
+
+spider = MonroevillePublicMeetings(google_api_key="test_placeholder")
 
 freezer = freeze_time("2020-10-18")
 freezer.start()
