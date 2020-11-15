@@ -6,7 +6,7 @@ import pytest
 from city_scrapers_core.utils import file_response
 from freezegun import freeze_time
 
-from city_scrapers.spiders.pa_mt_lebo_public_meetings import PaMtLeboSpider
+from city_scrapers.spiders.mt_lebo_public_meetings import PaMtLeboSpider
 
 test_response = file_response(
     join(dirname(__file__), "files", "pa_mt_lebanon.html"),

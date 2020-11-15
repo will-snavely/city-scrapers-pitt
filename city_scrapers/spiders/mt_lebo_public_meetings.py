@@ -14,6 +14,9 @@ from city_scrapers_core.spiders import CityScrapersSpider
 ADDRESS = ("710 Washington Road, Pittsburgh, PA 152289",)
 LOCATION_NAME = ("Municipal Building",)
 
+monthAndDayPattern = "[Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec]\S* \d+"
+monthPattern = "[Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec]\S*"
+doubleAsteriskPattern = "\*\*"
 
 class PaMtLeboSpider(CityScrapersSpider):
     name = "pa_mt_lebanon"
@@ -61,13 +64,13 @@ class PaMtLeboSpider(CityScrapersSpider):
         return COMMISSION
 
     def _parse_start(self, response, index):
+        """Parse start datetime as a naive datetime object."""
         monthAndDay = response.xpath("//tbody/tr/td/text()").getall()[index]
         day = self.getDay(monthAndDay)
         month = self.getMonth(monthAndDay)
         monthAndDay = self.getMonthAndDay(monthAndDay)
         year = str(self.getYear(response))
         time = self.getTime(response)
-        """Parse start datetime as a naive datetime object."""
         dateString = "" + year + " " + month + " " + day + " " + time
         formatString = "%Y %B %d %I %p"
         start = datetime.strptime(dateString, formatString)
@@ -93,9 +96,9 @@ class PaMtLeboSpider(CityScrapersSpider):
         }
 
     def _parse_links(self, response, index):
+        """Parse or generate links."""
         href = "http://mtlebanon.org/299/Commission-Meetings"
         title = "Mt Lebanon Commission Meeting"
-        """Parse or generate links."""
         return [{"href": href, "title": title}]
 
     def _parse_source(self, response, index):
@@ -104,15 +107,15 @@ class PaMtLeboSpider(CityScrapersSpider):
 
     def isValidEvent(self, response, index):
         # Check if cell contains Date and Time
-        pattern = "[Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec]\S* \d+"
         eventString = response.xpath("//tbody/tr/td/text()").getall()[index]
-        if re.search(pattern, eventString) != None:
+        if re.search(monthAndDayPattern, eventString) != None:
             # Check if cell contains asterisks, which indicate special events
             #  which for now will be ignored
-            pattern = "\*\*"
-            if re.search(pattern, eventString) != None:
+            # pattern = "\*\*"
+            if re.search(doubleAsteriskPattern, eventString) != None:
                 return False
-            return True
+            else:
+                return True
         return False
 
     def getTime(self, response):
@@ -123,12 +126,10 @@ class PaMtLeboSpider(CityScrapersSpider):
         return groups[0].upper() + groups[1].upper()
 
     def getMonth(self, monthAndDay):
-        pattern = "[Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec]\S*"
-        return re.search(pattern, monthAndDay).group(0)
+        return re.search(monthPattern, monthAndDay).group(0)
 
     def getMonthAndDay(self, monthAndDay):
-        pattern = "[Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec]\S* (\d+)"
-        return re.search(pattern, monthAndDay).group(0)
+        return re.search(monthAndDayPattern, monthAndDay).group(0)
 
     def getDay(self, monthAndDay):
         pattern = "\d+"
