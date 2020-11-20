@@ -14,12 +14,12 @@ from city_scrapers_core.spiders import CityScrapersSpider
 ADDRESS = ("710 Washington Road, Pittsburgh, PA 152289",)
 LOCATION_NAME = ("Municipal Building",)
 
-monthAndDayPattern = "[Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec]\S* \d+"
-monthPattern = "[Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec]\S*"
-doubleAsteriskPattern = "\*\*"
+MONTH_AND_DAY_PATTERN = "[Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec]\S* \d+"
+MONTH_PATTERN = "[Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec]\S*"
+DOUBLE_ASTERISK_PATTERN = "\*\*"
 
-class PaMtLeboSpider(CityScrapersSpider):
-    name = "pa_mt_lebanon"
+class MtLeboSpider(CityScrapersSpider):
+    name = "mt_lebo_public_meetings"
     agency = "Mt Lebanon Commission"
     timezone = "America/New_York"
     url = "http://mtlebanon.org/299/Commission-Meetings"
@@ -28,7 +28,6 @@ class PaMtLeboSpider(CityScrapersSpider):
     def parse(self, response):
         self.logger.info("PARSING")
         events = response.xpath("//tbody/tr/td/text()").getall()
-        print(len(events))
         for i in range(len(events)):
             if self.isValidEvent(response, i):
                 meeting = Meeting(
@@ -42,13 +41,13 @@ class PaMtLeboSpider(CityScrapersSpider):
                     location=self._parse_location(response, i),
                     links=self._parse_links(response, i),
                     source=self._parse_source(response, i),
-                    status=self._parse_status(response, i),
+                    status=self._parse_status(),
                 )
                 # meeting["status"] = self._get_status(meeting)
                 meeting["id"] = self._get_id(meeting)
                 yield meeting
 
-    def _parse_status(self, response, index):
+    def _parse_status(self):
         return "Tentative"
 
     def _parse_title(self):
@@ -108,11 +107,10 @@ class PaMtLeboSpider(CityScrapersSpider):
     def isValidEvent(self, response, index):
         # Check if cell contains Date and Time
         eventString = response.xpath("//tbody/tr/td/text()").getall()[index]
-        if re.search(monthAndDayPattern, eventString) != None:
+        if re.search(MONTH_AND_DAY_PATTERN, eventString) != None:
             # Check if cell contains asterisks, which indicate special events
             #  which for now will be ignored
-            # pattern = "\*\*"
-            if re.search(doubleAsteriskPattern, eventString) != None:
+            if re.search(DOUBLE_ASTERISK_PATTERN, eventString) != None:
                 return False
             else:
                 return True
@@ -120,24 +118,24 @@ class PaMtLeboSpider(CityScrapersSpider):
 
     def getTime(self, response):
         """Retrieves time in AM/PM format. As of this writing, it is 8 p.m."""
-        timepath = '//*[@id="divEditor04c7e1eb-6543-4734-b9bb-f65cd6b048c3"]/ul[2]/li[1]/text()'
+        timepath = "//h2/text()[contains(.,'Meetings')]/following::ul[1]/li[1]/text()"
         time = response.xpath(timepath).get(0)
         groups = re.search("(\d+ [a-z])\.([a-z])\.", time).groups()
         return groups[0].upper() + groups[1].upper()
 
     def getMonth(self, monthAndDay):
-        return re.search(monthPattern, monthAndDay).group(0)
+        return re.search(MONTH_PATTERN, monthAndDay).group(0)
 
     def getMonthAndDay(self, monthAndDay):
-        return re.search(monthAndDayPattern, monthAndDay).group(0)
+        return re.search(MONTH_AND_DAY_PATTERN, monthAndDay).group(0)
 
     def getDay(self, monthAndDay):
         pattern = "\d+"
         return re.search(pattern, monthAndDay).group(0)
 
     def getYear(self, response):
-        xpath = '//*[@id="divEditor04c7e1eb-6543-4734-b9bb-f65cd6b048c3"]/h2[3]/text()'
-        yearString = response.xpath(xpath).getall()[0]
+        xpath = "//h2/text()[contains(.,'Meeting Schedule')]"
+        yearString = response.xpath(xpath).get(0)
         pattern = "202\d Meeting Schedule"
         if re.search(pattern, yearString) != None:
             return int(re.search("202\d", yearString).group(0))

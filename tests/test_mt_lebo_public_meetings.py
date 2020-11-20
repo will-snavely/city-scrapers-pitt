@@ -6,13 +6,13 @@ import pytest
 from city_scrapers_core.utils import file_response
 from freezegun import freeze_time
 
-from city_scrapers.spiders.mt_lebo_public_meetings import PaMtLeboSpider
+from city_scrapers.spiders.mt_lebo_public_meetings import MtLeboSpider
 
 test_response = file_response(
     join(dirname(__file__), "files", "pa_mt_lebanon.html"),
     url="http://mtlebanon.org/299/Commission-Meetings",
 )
-spider = PaMtLeboSpider()
+spider = MtLeboSpider()
 
 freezer = freeze_time("2020-11-07")
 freezer.start()
@@ -42,7 +42,7 @@ def test_end():
 def test_id():
     assert (
         parsed_items[0]["id"]
-        == "pa_mt_lebanon/202001062000/x/mt_lebanon_commission_meeting"
+        == "mt_lebo_public_meetings/202001062000/x/mt_lebanon_commission_meeting"
     )
 
 
