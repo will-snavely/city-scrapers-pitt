@@ -18,6 +18,7 @@ MONTH_AND_DAY_PATTERN = "[Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec]\S* \d
 MONTH_PATTERN = "[Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec]\S*"
 DOUBLE_ASTERISK_PATTERN = "\*\*"
 
+
 class MtLeboSpider(CityScrapersSpider):
     name = "mt_lebo_public_meetings"
     agency = "Mt Lebanon Commission"
