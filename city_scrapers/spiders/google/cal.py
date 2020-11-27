@@ -114,7 +114,7 @@ class GoogleCalendarSpider(CityScrapersSpider):
             source=self.get_source(event),
         )
 
-        # Delegate to the base clas to set status and id
+        # Delegate to the base class to set status and id
         meeting["status"] = self._get_status(meeting)
         meeting["id"] = self._get_id(meeting)
         return meeting
