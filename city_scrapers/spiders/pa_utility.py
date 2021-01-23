@@ -1,69 +1,37 @@
-from datetime import datetime, time
-
 from city_scrapers_core.constants import COMMISSION
 from city_scrapers_core.items import Meeting
 from city_scrapers_core.spiders import CityScrapersSpider
-from dateutil.parser import parse
-
-url = "http://www.puc.pa.gov/about_puc/public_meeting_calendar/public_meeting_audio_summaries_.aspx"
-
-# Pulled this information from the site's PDFs
-ADDRESS = ("400 North St, Harrisburg, PA 17120",)
-LOCATION_NAME = ("MAIN HEARING ROOM NO. 1 SECOND FLOOR COMMONWEALTH KEYSTONE BUILDING",)
-
-# The meetings always seem to being at 10AM; this isn't reported on the page itself,
-# but is derived from reading minutes/agenda pdfs.
-DEFAULT_START_TIME = time(hour=10)
+from datetime import datetime
+from dateutil import parser
 
 
 class PaUtilitySpider(CityScrapersSpider):
     name = "pa_utility"
     agency = "PA Public Utility Commission"
     timezone = "America/New_York"
-    start_urls = [url]
+    base_url = "https://www.puc.pa.gov"
+    start_urls = [
+        f"{base_url}/about-the-puc/public-meetings-hearings/?MeetingType=meeting&MeetingBeginDate=2016-01-01&MeetingEndDate=2050-01-01&ufprt=69EB449024234D5997764DC69DFD1A21801B2873C28077463921ED5CEF44E9B8B794979267EF2FC3425F687CF2D3838EA24F9237B87364F056725A1384E44CD3A62CFFB5CA2503A0AE3B12AF0558F3BE09D1E2A5E3FE38D4B8044520CA32607246EE4A0D33DEF6F5C06714AF80E97E6F4A8592C0FB57E42B7056340C5A8350B140C1D0E93CA34DCE5886BC4B72C32A88226777E168FC024AA9CCCCFEDCA4FAB0203DDF37AFAF1442D15EFA91D4D5E8A21E3052D0A4C1328F6F3F9D221E3B0BB065370894AABC094C0CB0301D1C49CE79BE645BAA74FAFD36A0CF2AF1634ECA269471CD417AC5BFBA803E623AC8A17C6D#search-results"
+    ]
+    default_time: str = "10:00 AM"
+    default_address: str = "Room No. 1, 400 North St, Harrisburg, PA 17120"
+    default_building_name: str = "Commonwealth Keystone Building"
 
     def parse(self, response):
-        """
-        `parse` should always `yield` Meeting items.
+        table = response.xpath('//*[@id="search-results"]/div/table')
+        rows = table.xpath("//tr")
 
-        Change the `_parse_title`, `_parse_start`, etc methods to fit your scraping
-        needs.
-       """
-
-        self.logger.info("PARSING")
-        content = response.css(".center").xpath(".//text()").getall()
-        # self.logger.warning(content)
-
-        # this was necessary to make pytest consistent with scarpy
-        content = [text.lstrip("\r") for text in content]
-        # self.logger.warning(content)
-
-        # the following text appears before the meeting dates are listed
-        meeting_start_flag = "\n\tPublic Meeting Dates"
-
-        for i, item in enumerate(content):
-            if item == meeting_start_flag:
-                break
-        meeting_content = content[i + 1 :]
-        # self.logger.warning(meeting_content)
-
-        # filter to text that includes the meet dates
-        meeting_dates = [d for d in meeting_content if str.startswith(d, "\n\t")]
-        # self.logger.warning(meeting_dates)
-
-        for date_str in meeting_dates:
-            # self.logger.info(date_str)
-
+        for row in rows[1:]:
             meeting = Meeting(
-                title=self._parse_title(date_str),
-                description=self._parse_description(date_str),
-                classification=self._parse_classification(date_str),
-                start=self._parse_start(date_str),
-                end=self._parse_end(date_str),
+                title=self._parse_title(row),
+                description="",
+                classification=self._parse_classification(row),
+                start=self._parse_start(row),
+                end=None,
                 all_day=False,
-                time_notes=self._parse_time_notes(date_str),
-                location=self._parse_location(date_str),
-                links=self._parse_links(date_str),
+                time_notes=self._parse_time_notes(row, response),
+                location=self._parse_location(),
+                links=self._parse_links(row),
                 source=self._parse_source(response),
             )
 
@@ -72,45 +40,41 @@ class PaUtilitySpider(CityScrapersSpider):
 
             yield meeting
 
-    def _parse_title(self, item):
-        """Parse or generate meeting title."""
-        return "Pennsylvania Public Utility Commission Public Meetings"
+    def _parse_title(self, row) -> str:
+        return f"{self.agency} Meeting"
 
-    def _parse_description(self, item):
-        """Parse or generate meeting description."""
-        return "None"
-
-    def _parse_classification(self, item):
-        """Parse or generate classification from allowed options."""
+    def _parse_classification(self, row) -> str:
         return COMMISSION
 
-    def _parse_start(self, date_str):
-        """Parse start datetime as a naive datetime object."""
-        return datetime.combine(parse(date_str), DEFAULT_START_TIME)
+    def _parse_start(self, row) -> datetime:
+        raw_date: str = row.xpath("td[1]//text()").extract_first()
+        start_time: datetime = parser.parse(f"{raw_date} {self.default_time}")
+        return start_time
 
-    def _parse_end(self, item):
-        """Parse end datetime as a naive datetime object. Added by pipeline if None"""
-        return None
+    def _parse_time_notes(self, row, response) -> str:
+        time_notes: str = f"Please double-check {self.base_url} to confirm the start time."
+        event_specific_notes: str = row.xpath("td[3]//p//text()").extract_first()
+        if event_specific_notes:
+            time_notes = f"{time_notes}\n{event_specific_notes}"
 
-    def _parse_time_notes(self, item):
-        """Parse any additional notes on the timing of the meeting"""
-        return ""
+        return time_notes
 
-    def _parse_all_day(self, item):
-        """Parse or generate all-day status. Defaults to False."""
-        return False
-
-    def _parse_location(self, item):
-        """Seems like the meeting is always in the same place given the info in the Agenda PDFs."""
+    def _parse_location(self) -> dict:
         return {
-            "address": ADDRESS,
-            "name": LOCATION_NAME,
+            "address": self.default_address,
+            "name": self.default_building_name,
         }
 
-    def _parse_links(self, item):
-        """Parse or generate links."""
-        return [{"href": "", "title": ""}]
+    def _parse_links(self, row) -> dict:
+        # Note: This covers a corner case in which there is more than one
+        # link by simply returning a valid links dict but with no information.
+        if len(row.xpath("td[2]/a/@href")):
+            title: str = row.xpath("td[2]//text()").extract()[1]
+            relative_doc_path: str = row.xpath("td[2]/a/@href").extract_first()
+            link: str = f"{self.base_url}{relative_doc_path}"
+            return [{"href": link, "title": title}]
+        else:
+            return [{"href": "", "title": ""}]
 
-    def _parse_source(self, response):
-        """Parse or generate source."""
+    def _parse_source(self, response) -> str:
         return response.url

@@ -59,12 +59,11 @@ $ git merge upstream/master
 
 ## Python and Pipenv
 
-### Installing Python
+### [Installing Python and Pipenv on Windows](installing_python.md)
+If you want to install python on windows [click here](installing_python.md). If
+that tutorial didn't do it for you, here's another one.
 
-Here are some helpful links for setting up Python on your computer:
-
-- [Codecademy: Set-up Python](https://www.codecademy.com/articles/setup-python)
-- [Get started using Python on Windows for beginners](https://docs.microsoft.com/en-us/windows/python/beginners)
+ [Get started using Python on Windows for beginners](https://docs.microsoft.com/en-us/windows/python/beginners)
 
 ### Installing and using Pipenv
 

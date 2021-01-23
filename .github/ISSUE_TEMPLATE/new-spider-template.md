@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 ## Spider Name: 
-[[ insert spider name here, following the convention: city_agency, for example: "pa_housing"]]
+[[ insert spider name here, following the convention: city_agency, for example: "pa_housing", "alle_health", "pitt_housing"]]
 
 ## Website: 
 [[ insert URL where meetings are located]]

@@ -18,8 +18,7 @@ class PaLiquorboardSpider(CityScrapersSpider):
     start_urls = ["https://www.lcb.pa.gov/About-Us/Board/Pages/Public-Meetings.aspx"]
     BUILDING_NAME = "Pennsylvania Liquor Control Board Headquarters"
     ADDRESS = "Room 117, 604 Northwest Office Building, Harrisburg, PA 17124"
-    EXPECTED_START_HOUR = "11:00 AM"
-    EXPECTED_START_HOUR_AS_INT = 11
+    EXPECTED_START_HOUR = "11:00"
 
     # List of urls that we are going to scrape content from
     # We are extracting the entire html content -- all of the html content and saving it
@@ -31,19 +30,24 @@ class PaLiquorboardSpider(CityScrapersSpider):
         needs.
         """
         sel_id = "ctl00_PlaceHolderMain_PageContent__ControlWrapper_RichHtmlField"
-        sel_path = "/blockquote[1]/font/text()"
+        sel_path = "/blockquote/font/text()"
+        sel_path2 = "/blockquote/div/span/text()"
         select_txt = "//*[@id='" + sel_id + "']" + sel_path
+        select_txt2 = "//*[@id='" + sel_id + "']" + sel_path2
         # Identify CSS node or XPath you're interested in
         meetings = response.xpath(select_txt).extract()  # Make variable of that text
-        start_hour = self._parse_starting_hour(response)
+        meetings += response.xpath(select_txt2).extract()
 
+        container = response.xpath('//*[@id="container"]').extract()
+        match = re.search(r"(\d{2}:\d{2}) ?(AM|PM)", container[0])
+        time = match.group(1) if match else EXPECTED_START_HOUR
         for item in meetings:
 
             meeting = Meeting(
                 title=self._parse_title(item),
                 description=self._parse_description(item),
                 classification=self._parse_classification(item),
-                start=self._parse_start(item, start_hour),
+                start=self._parse_start(item, time),
                 end=self._parse_end(item),
                 all_day=self._parse_all_day(item),
                 time_notes=self._parse_time_notes(item),
@@ -69,33 +73,15 @@ class PaLiquorboardSpider(CityScrapersSpider):
         """Parse or generate classification from allowed options."""
         return BOARD
 
-    def _parse_start(self, item: str, start_hour: int):
+    def _parse_start(self, item: str, start_time: int):
         """Parse start datetime as a naive datetime object."""
         # Remove garbage from our date item:
-        clean_item = item
-        clean_item = re.sub("- ", "", item)
-        clean_item = re.sub("\\xa0", " ", clean_item)
-        start_time = datetime.strptime(clean_item, "%A, %B %d, %Y")
-
-        try:
-            if self.EXPECTED_START_HOUR in start_hour:
-                start_time = start_time.replace(hour=self.EXPECTED_START_HOUR_AS_INT)
-                return start_time
-            else:
-                return None
-        except ValueError:
-            return None
-
-    def _parse_starting_hour(self, response):
-        raw = (
-            response.css("#container > div.content > div > p > span > span")
-            .get()
-            .upper()
+        date_split = item.split(",")
+        date_string = "".join(date_split[1:])[1:]
+        start_datetime = datetime.strptime(
+            date_string + " " + start_time + ":00", "%B %d %Y %H:%M:%S"
         )
-
-        if self.EXPECTED_START_HOUR in raw:
-            found_start_hour = self.EXPECTED_START_HOUR
-        return found_start_hour
+        return start_datetime
 
     def _parse_end(self, item):
         """Parse end datetime as a naive datetime object. Added by pipeline if None"""

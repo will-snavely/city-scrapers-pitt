@@ -1,41 +1,10 @@
 from datetime import datetime  # convert utc time to datetime
-from html.parser import HTMLParser  # clean up HTML
 
 from city_scrapers_core.constants import BOARD
 from city_scrapers_core.items import Meeting
 from city_scrapers_core.spiders import CityScrapersSpider
 
-
-# Helper class for clean_date
-class MLStripper(HTMLParser):
-    # original author: eloff
-    # source: https://stackoverflow.com/questions/753052/strip-html-from-strings-in-python
-    def __init__(self):
-        self.reset()
-        self.strict = False
-        self.convert_charrefs = True
-        self.fed = []
-
-    def handle_data(self, d):
-        self.fed.append(d)
-
-    def get_data(self):
-        return "".join(self.fed)
-
-
-# Accepts an html string, returns a string without any html tags.
-# For example, clean_date("<h1>foo</h1>") will return just "foo".
-def clean_date(html):
-    # original author: eloff
-    # source: https://stackoverflow.com/questions/753052/strip-html-from-strings-in-python
-    s = MLStripper()
-    html = html.replace("\xa0", "")
-    html = html.replace("\r", "")
-    html = html.replace("\n", "")
-    s.feed(html)
-    cleaned = s.get_data()
-    cleaned = cleaned.replace(" ", "")  # Strip whitespace
-    return cleaned
+from city_scrapers.common.cleaners import scrub_html
 
 
 class AlleImprovementsSpider(CityScrapersSpider):
@@ -76,7 +45,7 @@ class AlleImprovementsSpider(CityScrapersSpider):
         root: str = '//*[@id="mainContainer"]/div[3]/section/div[1]/div[2]'
         path: str = root + "/div/div/div/div/div/table/tbody/tr/td[2]/p"
         dates_list: list = response.xpath(path)[0].get().split("<br>")
-        dates_list = list(map(clean_date, dates_list))
+        dates_list = list(map(scrub_html, dates_list))
         return dates_list
 
     def _parse_title(self) -> str:
@@ -95,7 +64,7 @@ class AlleImprovementsSpider(CityScrapersSpider):
         assert response.xpath(path).get() == expected
 
     def _parse_start(self, item) -> datetime:
-        date: datetime = datetime.strptime(item, "%B%d,%Y")
+        date: datetime = datetime.strptime(item, "%B %d, %Y")
         # Every meeting is assumed to take place at 9:30am
         # as asserted by _check_starting_hour_has_not_changed
         date_with_time_of_day: datetime = date.replace(hour=9, minute=30)
