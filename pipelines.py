@@ -17,6 +17,7 @@ from typing import List, Mapping
 from city_scrapers_core.pipelines import DiffPipeline
 from pytz import timezone
 from scrapy.crawler import Crawler
+from scrapy import signals
 
 import utils
 
@@ -40,6 +41,9 @@ class FileSystemDiffPipeline(DiffPipeline):
     def load_previous_results(self) -> List[Mapping]:
         """Walk the local directory, returning the latest result for each spider.
         """
+        if self.spider is None:
+            return
+
         tz = timezone(self.spider.timezone)
 
         # Since the file structure is Year/Month/Day/Time/<spider>.json, sorting
@@ -50,3 +54,32 @@ class FileSystemDiffPipeline(DiffPipeline):
             with open(latest) as f:
                 return [json.loads(line) for line in f.readlines()]
         return []
+
+    @classmethod
+    def from_crawler(cls, crawler: Crawler):
+        """Classmethod for creating a pipeline object from a Crawler
+
+        :param crawler: Crawler currently being run
+        :raises ValueError: Raises an error if an output format is not supplied
+        :return: Instance of DiffPipeline
+        """
+        pipelines = crawler.settings.get("ITEM_PIPELINES", {})
+        if "city_scrapers_core.pipelines.OpenCivicDataPipeline" in pipelines:
+            output_format = "ocd"
+        else:
+            raise ValueError(
+                "An output format pipeline must be enabled for diff middleware"
+            )
+        pipeline = cls(crawler, output_format)
+        if crawler.spider is None:
+            return pipeline
+        crawler.spider._previous_results = pipeline.load_previous_results()
+        if output_format == "ocd":
+            crawler.spider._previous_map = {}
+            for result in crawler.spider._previous_results:
+                extras_dict = result.get("extras") or result.get("extra") or {}
+                previous_id = extras_dict.get("cityscrapers.org/id")
+                crawler.spider._previous_map[previous_id] = result["_id"]
+        crawler.spider._scraped_ids = set()
+        crawler.signals.connect(pipeline.spider_idle, signal=signals.spider_idle)
+        return pipeline
